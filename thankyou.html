@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    var orderInf = ["", "", "", "", ""]; 
+
+    function printQuery() {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+          orderInf[i] = pair[1];
+      }
+
+      OutputOrder();
+    }
+
+    function OutputOrder(){
+      var subTotal =  orderInf[3] * 9.49;
+      var taxes = subTotal * 0.076;
+
+      document.getElementById("cusName").innerHTML = "Thank you for your order " + orderInf[0] + " " + orderInf[1] + ". It will be ready in 15-20 minutes!";
+      document.getElementById("phoneNum").innerHTML = orderInf[0] + " " + orderInf[1] + "</br>" + orderInf[2];
+      document.getElementById("typeAmtPizza").innerHTML = orderInf[4] + " Pizzas     -    " + orderInf[3];
+      document.getElementById("cashCalc").innerHTML = "Subtotal: $" + subTotal.toFixed(2) + "</br>" +
+      "Taxes: $" + taxes.toFixed(2) + "</br>" +
+      "Total: $" + (subTotal + taxes).toFixed(2) + "</br>";
+    }
+  </script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+  <title></title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Cheech's Pizza</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link disabled" href="#">Menu</a>
+        <a class="nav-item nav-link disabled" href="#">Location</a>
+        <a class="nav-item nav-link disabled" href="#">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container bg-light">
+    <div class="thank-you">
+      <h1 id="cusName" class="display-4">Thank you for your order! It will be ready in 15-20 minutes!</h1>
+    </div>
+    <div class="thank-you">
+      <p id="phoneNum">000-000-0000</p>
+      <h2>Pizza's Purchased</h2>
+      <p id="typeAmtPizza">0 of 0!</p>
+    </div>
+    <div class="thank-you">
+      <h2>Payment</h2>
+      <p id="cashCalc">TOTAL CALCULATION ERROR: PLEASE CALL STORE TO FIND OUT ORDER TOTAL</p>
+    </div>
+    <script>
+      printQuery();
+    </script>
+  </div>
+</body>
+
+</html>

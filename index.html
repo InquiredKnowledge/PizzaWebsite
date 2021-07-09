@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Isaac Kirk
+    CIS-131-102 -
+    9/18/2020 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cheech's Pizza</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Cheech's Pizza</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link disabled" href="#">Menu</a>
+            <a class="nav-item nav-link disabled" href="#">Location</a>
+            <a class="nav-item nav-link disabled" href="#">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    <div class="container bg-light">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Cheech's Pizza!</h1>
+            <p class="lead">We have the best Pizzas in town!</p>
+            <hr class="my-4">
+            <p class="font-italic">"Cheech's has the best Pizzas in town" - Cheech's Mom</p>
+          </div>
+          <form id="orderForm" action="thankyou.html" method="GET"> 
+            <h1>Pizza Order Form</h1>
+             <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Enter your first name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter your last name">
+                </div>
+              </div>
+              <span id="errorMgName" style="display:none">OOPS you are not supposed to see this</span>
+              <div class="form-group">
+                <label for="inputPhoneNum">Phone Number</label>
+                <input type="text" class="form-control" name="inputPhoneNum" id="inputPhoneNum" placeholder="000-000-0000">
+              </div>
+              <span id="errorMgPhone" style="display:none">OOPS you are not supposed to see this</span>
+              <div class="form-group">
+                <label for="amtPizzas">Amount of Pizzas | $9.49 per Pizza</label>
+                <select class="form-control" name="amtPizzas" id="amtPizzas">
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="typePizzas">Type of Pizzas</label>
+                <select class="form-control" name="typePizzas" id="typePizzas">
+                </select>
+              </div>
+            <button id="submitOrder" type="submit" class="btn btn-primary">Submit Order</button>
+          </form>
+    </div> 
+</body>
+</html>

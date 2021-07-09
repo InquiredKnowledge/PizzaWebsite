@@ -1,0 +1,54 @@
+body {
+    background-image: url("pizzas.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    box-shadow: 5px 5px 10px;
+    padding-left:0;
+    padding-right:0;
+    border: 1px solid;
+}
+
+.thank-you{
+    background-color: whitesmoke;
+    margin: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid black;
+}
+
+.thank-you h1{
+    margin-top: 32px;
+}
+
+.thank-you h2{
+    margin-bottom: 32px;
+}
+
+.thank-you p{
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+#phoneNum {
+    text-align: right;
+    float: right;
+    padding-right: 16px;
+    margin-top: 6px;
+}
+
+form {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+}
+
+span {
+    font-style: italic;
+    color: red;
+}
